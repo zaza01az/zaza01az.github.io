@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
+}
+
+body {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Initial gradient background */
+    background-size: 200% 200%; /* Enable smooth animation */
+    animation: gradient-animation 15s ease infinite; /* Background animation */
+    transition: background-color 1s ease; /* Smooth transition for background color */
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Updated font */
+    height: 100vh; /* Full height for body */
+    display: flex; /* Center content vertically */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+/* Keyframes for background animation */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    width: 80%; /* Responsive width */
+    max-width: 600px; /* Max width for container */
+}
+
+h3, h4 {
+    margin: 10px;
+    color: #333; /* Dark text color for better readability */
+}
+
+.name-placeholder {
+    font-size: 48px;
+    transition: color 0.5s; /* Smooth color transition */
+    color: #007bff; /* Initial text color */
+}
+
+.button-group {
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 12px 20px;
+    margin: 5px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Button background color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Transition effects */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); /* Button shadow */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 86, 179, 0.5); /* Deeper shadow on hover */
+}
+
+.quote-container {
+    margin-top: 20px;
+    font-size: 20px;
+    font-style: italic;
+    color: #555; /* Gray color for quotes */
+    padding: 10px;
+    border: 1px solid #ddd; /* Light border for quotes */
+    border-radius: 5px; /* Rounded corners for quote container */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+}
+
+/* Particle effects styles */
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: move 5s linear infinite; /* Move animation */
+}
+
+/* Create particles */
+.particle:nth-child(1) { left: 10%; animation-duration: 4s; }
+.particle:nth-child(2) { left: 30%; animation-duration: 6s; }
+.particle:nth-child(3) { left: 50%; animation-duration: 5s; }
+.particle:nth-child(4) { left: 70%; animation-duration: 7s; }
+.particle:nth-child(5) { left: 90%; animation-duration: 8s; }
